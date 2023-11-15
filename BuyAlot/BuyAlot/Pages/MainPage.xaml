@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BuyAlot.Pages.MainPage">
+    
+    <StackLayout Padding="20" Spacing="20">
+        <Label x:Name="lblWelcome"
+           FontSize="30"
+           TextColor="#333333"
+           HorizontalTextAlignment="Center"
+           FontAttributes="Bold"/>
+
+        <Button Text="Add Product"
+            BackgroundColor="#007BFF"
+            TextColor="White"
+            CornerRadius="10"
+            Clicked="OnAddProductClicked"/>
+
+        <Button Text="View Products"
+            BackgroundColor="#28A745"
+            TextColor="White"
+            CornerRadius="10"
+            Clicked="OnViewProductsClicked"/>
+
+        <Button Text="View Cart"
+            BackgroundColor="#FFC107"
+            TextColor="White"
+            CornerRadius="10"
+            Clicked="OnViewCartClicked"/>
+
+        <Button Text="Logout"
+            BackgroundColor="#DC3545"
+            TextColor="White"
+            CornerRadius="10"
+            Clicked="OnLogoutClicked"/>
+    </StackLayout>
+
+</ContentPage>

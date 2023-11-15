@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BuyAlot.Pages.ItemDetails">
+
+    <StackLayout Padding="20">
+        <!-- Display product details here -->
+        <Image Source="{Binding ImagePath}" HeightRequest="200" Aspect="AspectFill" />
+        <Label Text="{Binding ProductName}" FontSize="20" FontAttributes="Bold" />
+        <Label Text="{Binding ProductType}" FontSize="18" />
+        <Label Text="{Binding ProductPrice, StringFormat='Price: {0:C}'}" FontSize="18" />
+        <Label Text="{Binding Description}" FontSize="16" />
+
+        <StackLayout>
+            <Label Text="Quantity"/>
+            <Entry Placeholder="1" x:Name="txtQuantity"/>
+        </StackLayout>
+
+        <!-- Button to add the product to the cart -->
+        <Button Text="Add to Cart"
+                BackgroundColor="#9600FF"
+                TextColor="White"
+                CornerRadius="10"
+                Clicked="OnAddToCartClicked"
+                Margin="0,20,0,0"/>
+    </StackLayout>
+
+</ContentPage>

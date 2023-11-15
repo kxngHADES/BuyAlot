@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BuyAlot.Pages.LoginPage"
+             BackgroundImageSource="loginBackground.jpg">
+
+    <StackLayout>
+        <Grid RowSpacing="25" RowDefinitions="Auto, Auto, Auto, Auto">
+            <StackLayout Grid.Row="4">
+                <Label Text="Sign In"
+                           FontSize="25"
+                           TextColor="White"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"/>
+
+                <Frame BorderColor="White" 
+                       BackgroundColor="Transparent"
+                       Margin="15"
+                       Padding="0"
+                       CornerRadius="50">
+                    <Frame BorderColor="White" 
+                           BackgroundColor="Transparent"
+                           Margin="1"
+                           Padding="25,0,25,0"
+                           HeightRequest="60"
+                           CornerRadius="50">
+                        <Entry
+                            TextColor="White"
+                            FontSize="18"
+                            Placeholder="Username"
+                            PlaceholderColor="White"
+                            x:Name="txtUsername"/>
+                    </Frame>
+                </Frame>
+                <Frame BorderColor="White" 
+                       BackgroundColor="Transparent"
+                       Margin="15"
+                       Padding="0"
+                       CornerRadius="50">
+                    <Frame BorderColor="White" 
+                           BackgroundColor="Transparent"
+                           Margin="1"
+                           Padding="25,0,25,0"
+                           HeightRequest="60"
+                           CornerRadius="50">
+                        <Entry
+                            TextColor="White"
+                            FontSize="18"
+                            Placeholder="Password"
+                            IsPassword="True"
+                            PlaceholderColor="White"
+                            x:Name="txtPassword"/>
+                    </Frame>
+                </Frame>
+                <RelativeLayout Padding="25">
+                    <CheckBox
+                        Color="White"
+                        IsChecked="False"
+                        x:Name="cbxPassword"
+                        Margin="15,0,0,0"
+                        CheckedChanged="OnCheckChange"/>
+                    <Label
+                        Text="Show Password"
+                        TextColor="White"
+                        FontSize="18"
+                        RelativeLayout.XConstraint="50"
+                        RelativeLayout.YConstraint="3"/>
+                    <Button
+                        x:Name="btnPasswordF"
+                        Text="Forgot Password?"
+                        TextColor="White"
+                        FontSize="18"
+                        BackgroundColor="Transparent"
+                        RelativeLayout.XConstraint="205"
+                        RelativeLayout.YConstraint="-8"
+                        TextTransform="None"/>
+
+                </RelativeLayout>
+
+                <Button
+                    x:Name="btnRegister"
+                    Text="SIGN UP"
+                    TextColor="Blue"
+                    BorderWidth="2"
+                    BorderColor="#ffd1d1"
+                    Margin="10,0,10,0"
+                    FontSize="18"
+                    HeightRequest="60"
+                    CornerRadius="60"
+                    BackgroundColor="White"/>
+                <Button 
+                    x:Name="btnLogin"
+                    Text="LOG IN"
+                    TextColor="White"
+                    BorderWidth="2"
+                    BorderColor="#0919CB"
+                    BackgroundColor="#9600FF"
+                    Margin="10,10,10,0"
+                    FontSize="18"
+                    CornerRadius="50"
+                    HeightRequest="60"/>
+
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

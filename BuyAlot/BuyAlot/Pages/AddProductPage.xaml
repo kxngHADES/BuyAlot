@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BuyAlot.Pages.AddProductPage"
+             BackgroundImageSource="Logo.png">
+
+    <StackLayout Padding="20">
+        <Label Text="Add Product"
+               FontSize="25"
+               TextColor="White"
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"/>
+
+        <!-- Product ID will be automatically generated -->
+        <Label Text="Product ID"
+               FontSize="18"
+               TextColor="White"/>
+
+        <!-- Display generated product ID -->
+        <Label Text="{Binding ProductId}"
+               FontSize="18"
+               TextColor="White"
+               x:Name="lblProductId"
+               Margin="0,0,0,10"/>
+
+        <!-- Other product details entry fields -->
+        <Entry Placeholder="Product Name"
+               PlaceholderColor="White"
+               TextColor="White"
+               x:Name="txtProductName"
+               Margin="0,10,0,10"/>
+
+        <Entry Placeholder="Product Type"
+               PlaceholderColor="White"
+               TextColor="White"
+               x:Name="txtProductType"
+               Margin="0,10,0,10"/>
+
+        <Entry Placeholder="Product Price"
+               PlaceholderColor="White"
+               TextColor="White"
+               Keyboard="Numeric"
+               x:Name="txtProductPrice"
+               Margin="0,10,0,10"/>
+
+        <Entry Placeholder="Product Description"
+               PlaceholderColor="White"
+               TextColor="White"
+               x:Name="txtDescription"
+               Margin="0,10,0,10"/>
+
+        <!-- Image upload button -->
+        <Button Text="Upload Image"
+                TextColor="White"
+                BackgroundColor="#9600FF"
+                Clicked="OnUploadImageClicked"
+                Margin="0,20,0,10"/>
+
+        <!-- Image preview -->
+        <Image x:Name="imgPreview"
+               HeightRequest="150"
+               Aspect="AspectFill"
+               Margin="0,10,0,10"/>
+
+        <!-- Button to add product -->
+        <Button Text="Add Product"
+                TextColor="White"
+                BackgroundColor="#9600FF"
+                Clicked="OnAddProductClicked"
+                CornerRadius="10"
+                Margin="0,20,0,0"/>
+
+        <!-- Back arrow to go back to the main page -->
+        <Button Text="Back"
+                TextColor="White"
+                BackgroundColor="Transparent"
+                Clicked="OnBackClicked"
+                HorizontalOptions="Start"
+                Margin="0,20,0,0"/>
+
+    </StackLayout>
+
+</ContentPage>
